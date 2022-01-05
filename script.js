@@ -660,7 +660,7 @@ function dialogue12End() {
 }
 
 let audioCorrect = new Audio("./sound/correct.mp3");
-let audioWrong = new Audio("./sound/wrong.wav");
+let audioWrong = new Audio("./sound/bad.wav");
 let audioFanfare = new Audio("./sound/fanfare.mp3");
 let audioSad = new Audio("./sound/sad.wav");
 
