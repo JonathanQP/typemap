@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Antwerp Type Map</title>
+		<link rel="stylesheet" type="text/css" href="reset_plus.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="script.js" defer></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.antwerpen.be/core_branding_scss/5.0.1/main.min.css">
+	</head>
+
+	<body onload="NextQuestion(0)">
+		<a href=""><h3 id="reload">Restart</h3></a>
+		<div id="bgbox">
+			<img src="./img/skyline.svg" alt="" id="bg">
+			<div id="bgbottom"></div>
+		</div>
+		<div class="map">
+			<div id="section1">
+				<img src="./circle1.svg" class="point" id="point1">
+				<h3>Plantin Speaks?!</h3>
+			</div>
+			<div id="section2">
+				<img src="./circle2.svg" class="point" id="point2">
+				<img src="./circle3.svg" class="point" id="point3">
+				<img src="./circle4.svg" class="point" id="point4">
+				<h3>A Type of History</h3>
+			</div>
+			<div id="section3">
+				<img src="./circle5.svg" class="point" id="point5">
+				<img src="./circle6.svg" class="point" id="point6">
+				<img src="./circle7.svg" class="point" id="point7">
+				<img src="./circle8.svg" class="point" id="point8">
+				<h3>A Type of Present</h3>
+			</div>
+			<div id="section4">
+				<img src="./circle9.svg" class="point" id="point9">
+				<img src="./circle10.svg" class="point" id="point10">
+				<img src="./circle11.svg" class="point" id="point11">
+				<h3>Antwerp Abroad</h3>
+			</div>
+			<div id="section5">
+				<img src="./circle12.svg" class="point" id="point12">
+				<h3>The Farewell Letters</h3>
+			</div>
+		</div>
+
+		<div class="tutorial" id="dialogue0">
+			<div class="dialogueBox">
+				<h2 id="tutHead">Tutorial</h2>
+				<p class="tutorialText">Welcome to <span>Antwerp, You're my Type.</span><br><img src="./logo.svg" id="tutorialImg">Together with the <span>Plantin-Moretus Museum</span> you're about to start a journey through the rich typographical world of the city of Antwerp. That's right, letters! They're big here. You'll learn about our history, the history we're making right now, and how it all connects. And... you have the chance to win <span>exciting prizes</span>!</p>
+				<h2 id="instruction">Press the Next button to procceed.</h2>
+				<h3 class="nextButtonTut">Next</h3>
+				<h3 class="endButtonTut">End</h3>
+			</div>
+		</div>
+
+		<div class="dialogue" id="dialogue1">
+			<img src="./img/plantin.png" class="person">
+			<div class="dialogueBox">
+				<h2>Christophe Plantin:</h2>
+				<p class="dialogueText">dialogue1 line1 comes here</p>
+				<h3 class="nextButton">Next</h3>
+				<h3 class="endButton">End</h3>
+				<img src="./speech_arrow.svg" class="speechArrow">
+			</div>
+		</div>
+
+		<div class="dialogue" id="dialogue2">
+			<img src="./img/vesalius.png" class="person">
+			<div class="dialogueBox">
+				<h2>Andreas Vesalius:</h2>
+				<p class="dialogueText">dialogue1 line1 comes here</p>
+				<h3 class="nextButton">Next</h3>
+				<h3 class="endButton">End</h3>
+				<img src="./speech_arrow.svg" class="speechArrow">
+			</div>
+		</div>
+
+		<div class="dialogue" id="dialogue3">
+			<img src="./img/dodoens.png" class="person" id="tree">
+			<div class="dialogueBox">
+				<h2>Rembert Dodoens:</h2>
+				<p class="dialogueText">dialogue1 line1 comes here</p>
+				<h3 class="nextButton">Next</h3>
+				<h3 class="endButton">End</h3>
+				<img src="./speech_arrow.svg" class="speechArrow">
+			</div>
+		</div>
+
+		<div class="dialogue" id="dialogue4">
+			<img src="./img/letterpressman.png" class="person">
+			<div class="dialogueBox">
+				<h2>Enigmatic Letterpressman:</h2>
+				<p class="dialogueText">dialogue1 line1 comes here</p>
+				<h3 class="nextButton">Next</h3>
+				<h3 class="endButton">End</h3>
+				<img src="./speech_arrow.svg" class="speechArrow">
+			</div>
+		</div>
+
+		<div class="dialogue" id="dialogue5">
+			<img src="./img/museumkat.png" class="person">
+			<div class="dialogueBox">
+				<h2>Museum Cat:</h2>
+				<p class="dialogueText">dialogue1 line1 comes here</p>
+				<h3 class="nextButton">Next</h3>
+				<h3 class="endButton">End</h3>
+				<img src="./speech_arrow.svg" class="speechArrow">
+			</div>
+		</div>
+
+		<div class="dialogue" id="dialogue6">
+			<img src="./img/baerdemaeker.png" class="person">
+			<div class="dialogueBox">
+				<h2>Jo De Baerdemaeker:</h2>
+				<p class="dialogueText">dialogue1 line1 comes here</p>
+				<h3 class="nextButton">Next</h3>
+				<h3 class="endButton">End</h3>
+				<img src="./speech_arrow.svg" class="speechArrow">
+			</div>
+		</div>
+
+		<div class="dialogue" id="dialogue7">
+			<img src="./img/stationpersoon.png" class="person">
+			<div class="dialogueBox">
+				<h2>Anonymous Train Attendant:</h2>
+				<p class="dialogueText">dialogue1 line1 comes here</p>
+				<h3 class="nextButton">Next</h3>
+				<h3 class="endButton">End</h3>
+				<img src="./speech_arrow.svg" class="speechArrow">
+			</div>
+		</div>
+
+		<div class="dialogue" id="dialogue8">
+			<img src="./img/fontman.png" class="person">
+			<div class="dialogueBox">
+				<h2>Mysterious Fontman:</h2>
+				<p class="dialogueText">dialogue1 line1 comes here</p>
+				<h3 class="nextButton">Next</h3>
+				<h3 class="endButton">End</h3>
+				<img src="./speech_arrow.svg" class="speechArrow">
+			</div>
+		</div>
+
+		<div class="dialogue" id="dialogue9">
+			<img src="./img/vandevelde.png" class="person" id="painting">
+			<div class="dialogueBox">
+				<h2>Henry van de Velde:</h2>
+				<p class="dialogueText">dialogue1 line1 comes here</p>
+				<h3 class="nextButton">Next</h3>
+				<h3 class="endButton">End</h3>
+				<img src="./speech_arrow.svg" class="speechArrow">
+			</div>
+		</div>
+
+		<div class="dialogue" id="dialogue10">
+			<img src="./img/microsoft.png" class="person">
+			<div class="dialogueBox">
+				<h2>Probably Bill Gates:</h2>
+				<p class="dialogueText">dialogue1 line1 comes here</p>
+				<h3 class="nextButton">Next</h3>
+				<h3 class="endButton">End</h3>
+				<img src="./speech_arrow.svg" class="speechArrow">
+			</div>
+		</div>
+
+		<div class="dialogue" id="dialogue11">
+			<img src="./img/tibet.png" class="person">
+			<div class="dialogueBox">
+				<h2>Dalai Lama:</h2>
+				<p class="dialogueText">dialogue1 line1 comes here</p>
+				<h3 class="nextButton">Next</h3>
+				<h3 class="endButton">End</h3>
+				<img src="./speech_arrow.svg" class="speechArrow">
+			</div>
+		</div>
+
+		<div class="dialogue" id="dialogue12">
+			<img src="./img/hondman.png" class="person">
+			<div class="dialogueBox">
+				<h2>A Good Girl:</h2>
+				<p class="dialogueText">dialogue1 line1 comes here</p>
+				<h3 class="nextButton">Next</h3>
+				<h3 class="endButton">Start Quiz</h3>
+				<img src="./speech_arrow.svg" class="speechArrow">
+			</div>
+		</div>
+
+		<div class="modal-container" id="score-modal">
+			<div class="modal-content-container">
+
+					<h1>Quiz Completed.</h1>
+
+					<div class="grade-details">
+							<p>Attempts : 10</p>
+							<p>Wrong Answers : <span id="wrong-answers"></span></p>
+							<p>Right Answers : <span id="right-answers"></span></p>
+							<p>Grade : <span id="grade-percentage"></span>%</p>
+							<p ><span id="remarks"></span></p>
+					</div>
+					<div class="modal-button-container">
+							<button onclick="closeScoreModal()">Continue</button>
+					</div>
+			</div>
+  	</div>
+
+    <div class="game-quiz-container">
+			<div class="game-details-container">
+					<h1>Score : <span id="player-score"></span> / 10</h1>
+					<h1> Question : <span id="question-number"></span> / 10</h1>
+			</div>
+
+			<div class="game-question-container">
+					<h1 id="display-question"></h1>
+			</div>
+
+			<div class="game-options-container">
+
+				 <div class="modal-container" id="option-modal">
+
+							<div class="modal-content-container">
+									 <h1>Please Pick An Option</h1>
+
+									 <div class="modal-button-container">
+											<button onclick="closeOptionModal()">Continue</button>
+									</div>
+
+							</div>
+
+				 </div>
+
+					<span>
+							<input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+							<label for="option-one" class="option" id="option-one-label"></label>
+					</span>
+
+
+					<span>
+							<input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+							<label for="option-two" class="option" id="option-two-label"></label>
+					</span>
+
+
+					<span>
+							<input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+							<label for="option-three" class="option" id="option-three-label"></label>
+					</span>
+
+
+					<span>
+							<input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+							<label for="option-four" class="option" id="option-four-label"></label>
+					</span>
+
+			</div>
+
+			<div class="next-button-container">
+					<button onclick="handleNextQuestion()">Next Question</button>
+			</div>
+    </div>
+
+	</body>
+</html>
