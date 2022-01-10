@@ -206,7 +206,7 @@ nextButtons[2].addEventListener("click", dialogue3Next);
 
 function dialogue3Next() {
   key2.play();
-  let dialogueArray  = ["......<br>...I'm a tree. Why are you talking to me?", "...I look like the famous 16th century <span>botanist, Rembert Dodoens</span>?","...", "Yes. That's who I used to be, before I took root here.","<img src='./img/cruydt.jpg' id='tutorialImg'>Plantin? Yes...<br>I remember him. I suppose you could say he's a fellow plant, haha. He published my book. The <span>Cruydtboeck</span>. I think you call it Herbals in English? It's a beautiful book, full of illustrations of flowers and other wonderful plants. Do you wish to read it?"];
+  let dialogueArray  = ["......<br>...I'm a tree. Why are you talking to me?", "...I look like the famous 16th century <span>botanist, Rembert Dodoens</span>?","...", "Yes. That's who I used to be, before I took root here.","<img src='./img/cruydt.jpg' id='tutorialImg'>Plantin? Yes...<br>I remember him. I suppose you could say he's a fellow plant, haha. He published my book. The <span>Cruydeboeck</span>. I think you call it Herbals in English? It's a beautiful book, full of illustrations of flowers and other wonderful plants. Do you wish to read it?"];
   let dialogueCountTotal = dialogueArray.length;
   if (dialogueCount < dialogueCountTotal) {
     dialogueText[2].innerHTML = dialogueArray[dialogueCount];
