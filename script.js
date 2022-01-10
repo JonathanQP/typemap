@@ -44,6 +44,12 @@ audioBook.loop = true;
 audioDog.loop = true;
 audioQuiz.loop = true;
 
+points[5].style.visibility = "hidden";
+points[6].style.visibility = "hidden";
+points[7].style.visibility = "hidden";
+points[9].style.visibility = "hidden";
+points[10].style.visibility = "hidden";
+
 points[0].addEventListener("click", dialogue1Start);
 
 let sky = document.getElementById('bgbox');
@@ -69,7 +75,7 @@ let instruction = document.getElementById("instruction");
 
 function dialogue0Next() {
   key2.play();
-  let dialogueArray  = ["<img src='./img/interest.png' id='tutorialImg'>In a minute you'll be brought to our <span>map screen</span>. <br>On this screen you'll be able to select <span>points of interest</span> that will have you start conversations with some rather interesting figures. As you proceed to the dialogue, new points will unlock. Be sure to pay close attenton to what they have to say. There'll be a <span>quiz</span> at the end! But don't worry, you can take your time.", "<img src='./img/qr.svg' id='tutorialImg'>Before you proceed we'd like to ask four you to enter your <span>email</span>. This way we'll be able to give you access to your prize! We'll also use this information to inform you about interesting museum news in the future. You can enter your email on your phone by scanning this <span>QR-code</span>. You can unsubscribe from the newsletter at any time."];
+  let dialogueArray  = ["<img src='./img/interest.jpg' id='tutorialImg'>In a minute you'll be brought to our <span>map screen</span>. <br>On this screen you'll be able to select <span>points of interest</span> that will have you start conversations with some rather interesting figures. As you proceed to the dialogue, new points will unlock. Be sure to pay close attenton to what they have to say. There'll be a <span>quiz</span> at the end! But don't worry, you can take your time.", "<img src='./img/qr.svg' id='tutorialImg'>Before you proceed we'd like to ask four you to enter your <span>email</span>. This way we'll be able to give you access to your prize! We'll also use this information to inform you about interesting museum news in the future. You can enter your email on your phone by scanning this <span>QR-code</span>. You can unsubscribe from the newsletter at any time."];
   let dialogueCountTotal = dialogueArray.length;
   if (dialogueCount < dialogueCountTotal) {
     tutorialText[0].innerHTML = dialogueArray[dialogueCount];
@@ -101,7 +107,7 @@ function dialogue1Start() {
   sky.style.backgroundColor = "#D99D29";
   dialogues[0].style.visibility = "visible";
   nextButtons[0].style.visibility = "visible";
-  dialogueText[0].innerHTML = "Hmm? And who do we have here? Me? Why I'm Christoffel Plantin of course, the famous book printer and publisher! You can call me Christophe in English though.";
+  dialogueText[0].innerHTML = "Hmm? And who do we have here? Me? Why I'm <span>Christoffel Plantin</span> of course, the famous book printer and publisher! You can call me Christophe in English though.";
 }
 
 let nextButtons = document.getElementsByClassName("nextButton");
@@ -112,13 +118,13 @@ nextButtons[0].addEventListener("click", dialogue1Next);
 
 function dialogue1Next() {
   key2.play();
-  let dialogueArray  = ["I suppose I can tell you a little about me. I'm a busy man though, lots of books to print. We'll keep it short. I was born in France circa 1520, oui oui. But I'm a true Antwerpian at heart.", "<img src='./img/moretus.jpg' id='tutorialImg'>I'm known for establashing the Plantin Press you see, one of the most important printing presses of the 16th century.<br>Together with my business partner and son-in-law, Jan Moretus, we made history. We were responsible for some of the finest books on the whole world."];
+  let dialogueArray  = ["I suppose I can tell you a little about me. I'm a busy man though, lots of books to print. We'll keep it short. I was born in <span>France</span> circa 1520, oui oui. But I'm a true <span>Antwerpian</span> at heart.", "<img src='./img/moretus.jpg' id='tutorialImg'>I'm known for establishing the <span>Plantin Press</span> you see, one of the most important printing presses of the 16th century.<br>Together with my business partner and son-in-law, <span>Jan Moretus</span>, we made history. We were responsible for some of the finest books on the whole world."];
   let dialogueCountTotal = dialogueArray.length;
   if (dialogueCount < dialogueCountTotal) {
     dialogueText[0].innerHTML = dialogueArray[dialogueCount];
     dialogueCount++;
   } else {
-    dialogueText[0].innerHTML = "I hear they turned it into a museum... I'd love to go someday, but again, I'm a busy man and my buddy Rubens wants to hang out after work. Gotta go, kid. Maybe check out some of my work? Should find some in this city if you look for it.";
+    dialogueText[0].innerHTML = "I hear they turned it into a museum... I'd love to go someday, but again, I'm a busy man and my buddy <span>Rubens</span> wants to hang out after work. Gotta go, kid. Maybe check out some of my work? Should find some in this city if you look for it.";
     nextButtons[0].style.visibility = "hidden";
     endButtons[0].style.visibility = "visible";
     dialogueCount = 0;
@@ -147,20 +153,20 @@ function dialogue2Start() {
   sky.style.backgroundColor = "#333332";
   dialogues[1].style.visibility = "visible";
   nextButtons[1].style.visibility = "visible";
-  dialogueText[1].innerHTML = "Do not be afraid. It is I, Andreas Vesalius. Anatomist, physician and now... a skeleton. It's rather nice, I can study the human skeleton at any time! Hoho. Plantin? Yes, I know him.";
+  dialogueText[1].innerHTML = "Do not be afraid. It is I, <span>Andreas Vesalius</span>. <span>Anatomist</span>, <span>physician</span> and now... a skeleton. It's rather nice, I can study the human skeleton at any time! Hoho. Plantin? Yes, I know him.";
 }
 
 nextButtons[1].addEventListener("click", dialogue2Next);
 
 function dialogue2Next() {
   key2.play();
-  let dialogueArray  = ["<img src='./img/anatomy.jpg' id='tutorialImg'>One of my colleagues, the Spanish doctor Juan de Valverde, published the Vivae imagines corporis humani with him. And they used MY illustrations in it!<br>Hmm? I'm not upset. I'm proud.",  "What kind of illustrations? Oh, it's all human anatomy of course, lots of skeletons. Like me. You've got one too you know. It's SO fascinating. The sphenoid, the ethmoid... I could talk about it for hours. Hmm? Too complicated? Maybe Juan's book would help."];
+  let dialogueArray  = ["<img src='./img/anatomy.jpg' id='tutorialImg'>One of my colleagues, the Spanish doctor <span>Juan de Valverde</span>, published the <span>Vivae imagines corporis humani</span> with him. And they used MY <span>illustrations</span> in it!<br>Hmm? I'm not upset. I'm proud.",  "What kind of illustrations? Oh, it's all <span>human anatomy</span> of course, lots of skeletons. Like me. You've got one too you know. It's SO fascinating. The sphenoid, the ethmoid... I could talk about it for hours. Hmm? Too complicated? Maybe Juan's book would help."];
   let dialogueCountTotal = dialogueArray.length;
   if (dialogueCount < dialogueCountTotal) {
     dialogueText[1].innerHTML = dialogueArray[dialogueCount];
     dialogueCount++;
   } else {
-    dialogueText[1].innerHTML = "I really do recommend it. You can admire my work in this city you know. It's why I'm here today! Where do you find it? It's at that museum... Museum Plantin-M... M.... MMMMM...<br>I forgot. Maybe you can find it yourself? My bones are growing cold.";
+    dialogueText[1].innerHTML = "I really do recommend it. You can admire my work in this city you know. It's why I'm here today! Where do you find it? It's at that <span>museum</span>... Museum Plantin-M... M.... MMMMM...<br>I forgot. Maybe you can find it yourself? My bones are growing cold.";
     nextButtons[1].style.visibility = "hidden";
     endButtons[1].style.visibility = "visible";
     dialogueCount = 0;
@@ -200,13 +206,13 @@ nextButtons[2].addEventListener("click", dialogue3Next);
 
 function dialogue3Next() {
   key2.play();
-  let dialogueArray  = ["......<br>...I'm a tree. Why are you talking to me?", "...I look like the famous 16th century botanist, Rembert Dodoens?","...", "Yes. That's who I used to be, before I took root here.","<img src='./img/cruydt.jpg' id='tutorialImg'>Plantin? Yes...<br>I remember him. I suppose you could say he's a fellow plant, haha. He published my book. The Cruydtboeck. I think you call it Herbals in English? It's a beautiful book, full of illustrations of flowers and other wonderful plants. Do you wish to read it?"];
+  let dialogueArray  = ["......<br>...I'm a tree. Why are you talking to me?", "...I look like the famous 16th century <span>botanist, Rembert Dodoens</span>?","...", "Yes. That's who I used to be, before I took root here.","<img src='./img/cruydt.jpg' id='tutorialImg'>Plantin? Yes...<br>I remember him. I suppose you could say he's a fellow plant, haha. He published my book. The <span>Cruydtboeck</span>. I think you call it Herbals in English? It's a beautiful book, full of illustrations of flowers and other wonderful plants. Do you wish to read it?"];
   let dialogueCountTotal = dialogueArray.length;
   if (dialogueCount < dialogueCountTotal) {
     dialogueText[2].innerHTML = dialogueArray[dialogueCount];
     dialogueCount++;
   } else {
-    dialogueText[2].innerHTML = "I no longer read books. They're often made from trees, you see. My leaves shake when I think about it.<br>Oh but you should still read it. I want you to love plants as much as I do! You can find it at... hmmm... a museum. I can't go to museums, I'm afraid you'll have to find it without me. Do not tell anyone of my true nature. Do you get it? Nature? Haha. Goodbye.";
+    dialogueText[2].innerHTML = "I no longer read books. They're often made from trees, you see. My leaves shake when I think about it.<br>Oh but you should still read it. I want you to love plants as much as I do! You can find it at... hmmm... a <span>museum</span>. I can't go to museums, I'm afraid you'll have to find it without me. Do not tell anyone of my true nature. Do you get it? Nature? Haha. Goodbye.";
     nextButtons[2].style.visibility = "hidden";
     endButtons[2].style.visibility = "visible";
     dialogueCount = 0;
@@ -247,13 +253,13 @@ nextButtons[3].addEventListener("click", dialogue4Next);
 
 function dialogue4Next() {
   key2.play();
-  let dialogueArray  = ["IN THE PAST, ALL WORDS WERE PRESSED USING US. OH SUCH JOY, SUCH PURPOSE. 1,250 SHEETS PER DAY, BABY.<br><i>*CLANG*</i>", "<img src='./img/press.jpg' id='tutorialImg'>ME AND MY 6 COMRADES ARE THE OLDEST PRINTING PRESSES IN THE WORLD YOU KNOW. AND YOU CAN ONLY FIND US HERE.<br><i>*CLING CLANG*</i><br>HERE IN THE ANTWERP PLACE."];
+  let dialogueArray  = ["IN THE PAST, ALL WORDS WERE PRESSED USING US. OH SUCH JOY, SUCH PURPOSE. <span>1,250 SHEETS</span> PER DAY, BABY.<br><i>*CLANG*</i>", "<img src='./img/press.jpg' id='tutorialImg'>ME AND MY <span>6 COMRADES</span> ARE THE <span>OLDEST PRINTING PRESSES</span> IN THE WORLD YOU KNOW. AND YOU CAN ONLY FIND US HERE.<br><i>*CLING CLANG*</i><br>HERE IN THE ANTWERP PLACE."];
   let dialogueCountTotal = dialogueArray.length;
   if (dialogueCount < dialogueCountTotal) {
     dialogueText[3].innerHTML = dialogueArray[dialogueCount];
     dialogueCount++;
   } else {
-    dialogueText[3].innerHTML = "IN THE MORETUS PLACE. IN THE MUSEUM PLACE.<br>YOU WILL VISIT, YES? SUCH JOY, SUCH PURPOSE.<br><i>*The figure goes quiet.*</i>";
+    dialogueText[3].innerHTML = "IN THE <span>MORETUS</span> PLACE. IN THE <span>MUSEUM</span> PLACE.<br>YOU WILL VISIT, YES? SUCH JOY, SUCH PURPOSE.<br><i>*The figure goes quiet.*</i>";
     nextButtons[3].style.visibility = "hidden";
     endButtons[3].style.visibility = "visible";
     dialogueCount = 0;
@@ -294,7 +300,7 @@ nextButtons[4].addEventListener("click", dialogue5Next);
 
 function dialogue5Next() {
   key2.play();
-  let dialogueArray  = ["Museum Plantin-Moretus?<br><img src='./img/museum.jpg' id='tutorialImg'>Yessss. That's heeere. But you can't enterrr. I'm afraid we've lost the keeey. A dooog took it from me. TYPICAL.", "Why did I have the keeey? I'm in chaaarge around here. I'm a biiit of a museum mascot. I'm from the wooodblock collection of the museum and I wasss on the 2021's New Year's caaard!", "That doesn't make meee a mascot? RUDE. I'm toootally a mascot. I was going to teeell you where that dooog ran off to, but you'll haaave to figure it out on your ooown."];
+  let dialogueArray  = ["<span>Museum Plantin-Moretus</span>?<br><img src='./img/museum.jpg' id='tutorialImg'>Yessss. That's heeere. But you can't enterrr. I'm afraid we've lost the <span>keeey</span>. A dooog took it from me. TYPICAL.", "Why did I have the keeey? I'm in chaaarge around here. I'm a biiit of a museum <span>mascot</span>. I'm from the <span>wooodblock collection</span> of the museum and I wasss on the 2021's <span>New Year's caaard</span>!", "That doesn't make meee a mascot? RUDE. I'm toootally a mascot. I was going to teeell you where that dooog ran off to, but you'll haaave to figure it out on your ooown."];
   let dialogueCountTotal = dialogueArray.length;
   if (dialogueCount < dialogueCountTotal) {
     dialogueText[4].innerHTML = dialogueArray[dialogueCount];
@@ -320,6 +326,9 @@ function dialogue5End() {
   audioCat.pause();
   audioCat.currentTime = 0;
   sky.style.backgroundColor = "#F2EFE9";
+  points[5].style.visibility = "visible";
+  points[6].style.visibility = "visible";
+  points[7].style.visibility = "visible";
 
   if (dialogue5status == 1 && dialogue6status == 1  && dialogue7status == 1 && dialogue8status == 1) {
     section4.style.visibility = "visible";
@@ -341,13 +350,13 @@ nextButtons[5].addEventListener("click", dialogue6Next);
 
 function dialogue6Next() {
   key2.play();
-  let dialogueArray  = ["<img src='./img/studiotype.png' id='tutorialImg'>The proposal? Oh it's for a new font I'm developing. I'm Jo De Baerdemaeker, but people also know me as @typojo. As the creator of Studio Type I'm one of the only font developers in Belgium you know, and I live here in Antwerp. It's a fascinating city for lovers of typography like me.", "I don't just make fonts you see, I also study their history and digitize them. That's where the museum comes into place. It's a great source of inspiration, so I work with them.", "You should go on one of our Type Walks for example. Those are tours I give throughout the city in which you'll discover all kinds of typographical beauty. And maybe you'll discover a way to open the museum on the way?"];
+  let dialogueArray  = ["<img src='./img/studiotype.png' id='tutorialImg'>The proposal? Oh it's for a new font I'm developing. I'm <span>Jo De Baerdemaeker</span>, but people also know me as <span>@typojo</span>. As the creator of <span>Studio Type</span> I'm one of the only font developers in Belgium you know, and I live here in Antwerp. It's a fascinating city for lovers of typography like me.", "I don't just make fonts you see, I also <span>study their history</span> and <span>digitize</span> them. That's where the museum comes into place. It's a great source of inspiration, so <span>I work with them</span>.", "You should go on one of our <span>Type Walks</span> for example. Those are tours I give throughout the city in which you'll discover all kinds of typographical beauty. And maybe you'll discover a way to open the museum on the way?"];
   let dialogueCountTotal = dialogueArray.length;
   if (dialogueCount < dialogueCountTotal) {
     dialogueText[5].innerHTML = dialogueArray[dialogueCount];
     dialogueCount++;
   } else {
-    dialogueText[5].innerHTML = "You can also consider looking outside of Antwerp, just because you go look elsewhere doesn't mean you won't find connections to this place. Just keep your eyes open for interesting letters.<br>Good luck.";
+    dialogueText[5].innerHTML = "You can also consider looking <span>outside</span> of Antwerp, just because you go look elsewhere doesn't mean you won't find <span>connections</span> to this place. Just keep your eyes open for interesting letters.<br>Good luck.";
     nextButtons[5].style.visibility = "hidden";
     endButtons[5].style.visibility = "visible";
     dialogueCount = 0;
@@ -381,20 +390,20 @@ function dialogue7Start() {
   sky.style.backgroundColor = "#41b6e6";
   dialogues[6].style.visibility = "visible";
   nextButtons[6].style.visibility = "visible";
-  dialogueText[6].innerHTML = "Welcome to the Antwerp Central Station. Are you new here? It's a beautiful building, isn't it? That's why people also call it the Railroad Cathedral. You won't find a station like this anywhere else. Is there anything I can help you with?";
+  dialogueText[6].innerHTML = "Welcome to the <span>Antwerp Central Station</span>. Are you new here? It's a beautiful building, isn't it? That's why people also call it the <span>Railroad Cathedral</span>. You won't find a station like this anywhere else. Is there anything I can help you with?";
 }
 
 nextButtons[6].addEventListener("click", dialogue7Next);
 
 function dialogue7Next() {
   key2.play();
-  let dialogueArray  = ["<img src='./img/antwerpen.jpg' id='tutorialImg'>Typography? A way to the Plantin-Moretus museum? Hmmm.<br>Well if you look around this station, you'll see plenty of beautiful typography, in golden lettering... Does that help?", "There's a lot of typography like that in this city, I think that's what a Type Walk's for, right? It sounds like fun! Maybe I'll give it a go after my shift."];
+  let dialogueArray  = ["<img src='./img/antwerpen.jpg' id='tutorialImg'>Typography? A way to the Plantin-Moretus museum? Hmmm.<br>Well if you look around this station, you'll see plenty of <span>beautiful typography, in golden lettering</span>... Does that help?", "There's a lot of typography like that in this city, I think that's what a <span>Type Walk</span>'s for, right? It sounds like fun! Maybe I'll give it a go after my shift."];
   let dialogueCountTotal = dialogueArray.length;
   if (dialogueCount < dialogueCountTotal) {
     dialogueText[6].innerHTML = dialogueArray[dialogueCount];
     dialogueCount++;
   } else {
-    dialogueText[6].innerHTML = "And if you can't find what you're looking for, may I suggest you travel by train? Safe travels!";
+    dialogueText[6].innerHTML = "And if you can't find what you're looking for, may I suggest you <span>travel</span> by train? Safe travels!";
     nextButtons[6].style.visibility = "hidden";
     endButtons[6].style.visibility = "visible";
     dialogueCount = 0;
@@ -428,20 +437,20 @@ function dialogue8Start() {
   sky.style.backgroundColor = "#ffcd00";
   dialogues[7].style.visibility = "visible";
   nextButtons[7].style.visibility = "visible";
-  dialogueText[7].innerHTML = "YOU LOOK SURPRISED! I AM A FONT! ALL DIGITAL, ALL 0s AND 1s. <i>*BEEP*</i><br>WAIT. YOU DON'T LOOK THAT SURPRISED. DID YOU MEET... HIM? DID YOU MEET... &lt;letterpressman&gt;?<br>HE'S MY GREAT-GRANDFATHER.";
+  dialogueText[7].innerHTML = "YOU LOOK SURPRISED! I AM A <span>FONT</span>! ALL <span>DIGITAL</span>, ALL 0s AND 1s. <i>*BEEP*</i><br>WAIT. YOU DON'T LOOK THAT SURPRISED. DID YOU MEET... HIM? DID YOU MEET... &lt;letterpressman&gt;?<br>HE'S MY GREAT-GRANDFATHER.";
 }
 
 nextButtons[7].addEventListener("click", dialogue8Next);
 
 function dialogue8Next() {
   key2.play();
-  let dialogueArray  = ["<img src='./img/fontflyer.jpg' id='tutorialImg'>AND NOT JUST ANY FONT! I AM THE FONT EVERYONE SEES IN THIS CITY. I AM THE <Antwerpen> FONT!<br>I AM DESIGNED BY STUDIO TYPE AKA &lt;Jo De Baerdemaeker&gt;. I AM USED IN THE CITY'S COMMUNICATIONS.<br>LOOK AT A SIGN AROUND HERE AND YOU MIGHT SEE ME.<i>*BEEP BOOP*</i>", "EVEN THE LETTERS YOU ARE READING ARE ALL ME! SURPRISED? I KNOW I AM."];
+  let dialogueArray  = ["<img src='./img/fontflyer.jpg' id='tutorialImg'>AND NOT JUST ANY FONT! I AM THE FONT EVERYONE SEES IN THIS CITY. I AM THE <span><Antwerpen></span> FONT!<br>I AM DESIGNED BY <span>STUDIO TYPE</span> AKA &lt;<span>Jo De Baerdemaeker</span>&gt;. I AM USED IN THE <span>CITY'S COMMUNICATIONS</span>.<br>LOOK AT A SIGN AROUND HERE AND YOU MIGHT SEE ME.<i>*BEEP BOOP*</i>", "EVEN THE <span>LETTERS YOU ARE READING</span> ARE ALL ME! SURPRISED? I KNOW I AM."];
   let dialogueCountTotal = dialogueArray.length;
   if (dialogueCount < dialogueCountTotal) {
     dialogueText[7].innerHTML = dialogueArray[dialogueCount];
     dialogueCount++;
   } else {
-    dialogueText[7].innerHTML = "DIGITAL LETTERS ARE GREAT. I HEAR YOU CAN FIND ALL KINDS OF DIGITAL LETTERS IN OTHER PARTS OF THE WORLD. BUT REMEMBER TO RESPECT YOUR ELDERS, MY GREAT-GRANDPA IS SCARY.<br><i>*The beeping quiets down.*</i>";
+    dialogueText[7].innerHTML = "DIGITAL LETTERS ARE GREAT. I HEAR YOU CAN FIND ALL KINDS OF DIGITAL LETTERS IN <span>OTHER PARTS OF THE WORLD</span>. BUT REMEMBER TO RESPECT YOUR ELDERS, MY GREAT-GRANDPA IS SCARY.<br><i>*The beeping quiets down.*</i>";
     nextButtons[7].style.visibility = "hidden";
     endButtons[7].style.visibility = "visible";
     dialogueCount = 0;
@@ -475,20 +484,20 @@ function dialogue9Start() {
   sky.style.backgroundColor = "#8FC2D7";
   dialogues[8].style.visibility = "visible";
   nextButtons[8].style.visibility = "visible";
-  dialogueText[8].innerHTML = "Welcome to Brussels. I'm Henry van de Velde, the 20th century painter, interior designer and architect. What brings you to this fine city?";
+  dialogueText[8].innerHTML = "Welcome to <span>Brussels</span>. I'm <span>Henry van de Velde</span>, the 20th century<span> painter, interior designer and architect</span>. What brings you to this fine city?";
 }
 
 nextButtons[8].addEventListener("click", dialogue9Next);
 
 function dialogue9Next() {
   key2.play();
-  let dialogueArray  = ["<img src='./img/boekentoren.jpg' id='tutorialImg'>Oh, here from Antwerp are you? Why that's where I was born! And you are looking for a way to enter the Plantin-Moretus museum so you figured the Boekentoren would be a good source of information? I see! Good thinking, the building houses 3 million books after all. ","However... you took the wrong train. I might have been active in Brussels, but the Boekentoren is in Ghent.", "I designed the Boekentoren for the Ghent University and it became one of my most famous buildings. A tower full of typography, designed by an Antwerpian! Plantin would love it. Yes, don't worry about the train thing. I will do everything in my power to help you.", "After all I would be helping a new friend of mine too. Jo De Baerdemaeker, do you know him?<br>You've met?! How wonderful. Yes, he won the title 'New Flemish Masters in the Fine Arts' at the Henry van de Velde Awards, so I like to follow his works."];
+  let dialogueArray  = ["<img src='./img/boekentoren.jpg' id='tutorialImg'>Oh, here from Antwerp are you? Why that's where I was born! And you are looking for a way to enter the Plantin-Moretus museum so you figured the <span>Boekentoren</span> would be a good source of information? I see! Good thinking, the building houses <span>3 million books</span> after all. ","However... you took the wrong train. I might have been active in Brussels, but the Boekentoren is in <span>Ghent</span>.", "I designed the Boekentoren for the <span>Ghent University</span> and it became one of my most famous buildings. A tower full of typography, designed by an Antwerpian! Plantin would love it. Yes, don't worry about the train thing. I will do everything in my power to help you.", "After all I would be helping a new friend of mine too. <span>Jo De Baerdemaeker</span>, do you know him?<br>You've met?! How wonderful. Yes, he won the title <span>'New Flemish Masters in the Fine Arts'</span> at the <span>Henry van de Velde Awards</span>, so I like to follow his works."];
   let dialogueCountTotal = dialogueArray.length;
   if (dialogueCount < dialogueCountTotal) {
     dialogueText[8].innerHTML = dialogueArray[dialogueCount];
     dialogueCount++;
   } else {
-    dialogueText[8].innerHTML = "That can't be a coincidence! You must be on the right track. I believe you should continue your search for points of interest related to De Baerdemaeker. You can even find connections to his typography on the other side of the world, you know. Bon voyage!";
+    dialogueText[8].innerHTML = "That can't be a coincidence! You must be on the right track. I believe you should continue your search for points of interest related to De Baerdemaeker. You can even find connections to his typography on the <span>other side of the world</span>, you know. Bon voyage!";
     nextButtons[8].style.visibility = "hidden";
     endButtons[8].style.visibility = "visible";
     dialogueCount = 0;
@@ -508,6 +517,8 @@ function dialogue9End() {
   audioBook.pause();
   audioBook.currentTime = 0;
   sky.style.backgroundColor = "#F2EFE9";
+  points[9].style.visibility = "visible";
+  points[10].style.visibility = "visible";
 
   if (dialogue9status == 1 && dialogue10status == 1  && dialogue11status == 1) {
     section5.style.visibility = "visible";
@@ -522,14 +533,14 @@ function dialogue10Start() {
   sky.style.backgroundColor = "#00CFC1";
   dialogues[9].style.visibility = "visible";
   nextButtons[9].style.visibility = "visible";
-  dialogueText[9].innerHTML = "Welcome to the United States of America. Hmm? Bill Gates? No no no, I'm a tourist from Antwerp. Don't worry, I get that all the time.";
+  dialogueText[9].innerHTML = "Welcome to the <span>United States of America</span>. Hmm? Bill Gates? No no no, I'm a tourist from Antwerp. Don't worry, I get that all the time.";
 }
 
 nextButtons[9].addEventListener("click", dialogue10Next);
 
 function dialogue10Next() {
   key2.play();
-  let dialogueArray  = ["...Look, please don't tell anyone it's me. I'll do anything. 2 billion? 5? You name it.", "Oh, you just want to learn more about fonts? Yeah, Google and Apple have them too, but when I worked at Microsoft we were some real font pioneers. TrueType and OpenType, we set those standards in the 90s. And they're still the standards today.", "Do I know anything about fonts from Antwerp? Well yeah, did you see the card? I love Antwerp. Totally. Let me think.","<img src='./img/nirmala.png' id='tutorialImg'>Well you got that Belgian fellow right, I think he's from Antwerp. Joey The Beardmaker? Uh, Baerdemaeker? Yeah sure, why not. He's worked with us. He worked on Nirmala UI for example, that's one of our fonts. Did the Bengali variant. He's a real pro, probably."];
+  let dialogueArray  = ["...Look, please don't tell anyone it's me. I'll do anything. 2 billion? 5? You name it.", "Oh, you just want to learn more about fonts? Yeah, <span>Google and Apple</span> have them too, but when I worked at <span>Microsoft</span> we were some real font pioneers. <span>TrueType and OpenType</span>, we set those standards in the 90s. And they're still the standards today.", "Do I know anything about fonts from Antwerp? Well yeah, did you see the card? I love Antwerp. Totally. Let me think.","<img src='./img/nirmala.png' id='tutorialImg'>Well you got that Belgian fellow right, I think he's from Antwerp. Joey The Beardmaker? Uh, <span>Baerdemaeker</span>? Yeah sure, why not. He's worked with us. He worked on <span>Nirmala UI</span> for example, that's one of our fonts. Did the Bengali variant. He's a real pro, probably."];
   let dialogueCountTotal = dialogueArray.length;
   if (dialogueCount < dialogueCountTotal) {
     dialogueText[9].innerHTML = dialogueArray[dialogueCount];
@@ -571,20 +582,20 @@ function dialogue11Start() {
   sky.style.backgroundColor = "#607196";
   dialogues[10].style.visibility = "visible";
   nextButtons[10].style.visibility = "visible";
-  dialogueText[10].innerHTML = "Welcome to Tibet. I'm Tenzin Gyatso. You might know me as the 14th Dalai Lama, the highest spiritual leader of Tibet. But most of all I'm... a lover of Antwerp and its fonts. I just had to meet you.";
+  dialogueText[10].innerHTML = "Welcome to <span>Tibet</span>. I'm <span>Tenzin Gyatso</span>. You might know me as the <span>14th Dalai Lama</span>, the highest spiritual leader of Tibet. But most of all I'm... a lover of Antwerp and its fonts. I just had to meet you.";
 }
 
 nextButtons[10].addEventListener("click", dialogue11Next);
 
 function dialogue11Next() {
   key2.play();
-  let dialogueArray  = ["I've heard about your travels you see, going around the world just to enter a museum in Antwerp? I admire your dedication!<br> Not only that, I also wish to help you. You see, I know you have met Jo De Baerdemaeker and he has helped us a great deal in the past. It only makes sense to repay that favor.", "How did he help us? Well, he helped us preserve Tibetan fonts. He even wrote about it in a book called Tibetan Typeforms. That man cares a great deal about the history of typography, from all over the world.", "<img src='./img/tibetan.png' id='tutorialImg'>Tibetan script is quite beautiful. Both our printed uchen script and our hand-written umê script are important to our identity."];
+  let dialogueArray  = ["I've heard about your travels you see, going around the world just to enter a museum in Antwerp? I admire your dedication!<br> Not only that, I also wish to help you. You see, I know you have met <span>Jo De Baerdemaeker</span> and he has helped us a great deal in the past. It only makes sense to repay that favor.", "How did he help us? Well, he helped us <span>preserve Tibetan fonts</span>. He even wrote about it in a book called <span>Tibetan Typeforms</span>. That man cares a great deal about the history of typography, from all over the world.", "<img src='./img/tibetan.png' id='tutorialImg'>Tibetan script is quite beautiful. Both our <span>printed uchen script</span> and our <span>hand-written umê script</span> are important to our identity."];
   let dialogueCountTotal = dialogueArray.length;
   if (dialogueCount < dialogueCountTotal) {
     dialogueText[10].innerHTML = dialogueArray[dialogueCount];
     dialogueCount++;
   } else {
-    dialogueText[10].innerHTML = "Anyway, I've been told you're looking for a dog. You're on the right track, she was spotted around here a while ago. She took a plane to another country though, I believe it was Japan? I'm certain you'll recover the key to the museum soon. Goodbye.";
+    dialogueText[10].innerHTML = "Anyway, I've been told you're looking for a <span>dog</span>. You're on the right track, she was spotted around here a while ago. She took a plane to another country though, I believe it was <span>Japan</span>? I'm certain you'll recover the <span>key</span> to the museum soon. Goodbye.";
     nextButtons[10].style.visibility = "hidden";
     endButtons[10].style.visibility = "visible";
     dialogueCount = 0;
@@ -618,20 +629,20 @@ function dialogue12Start() {
   sky.style.backgroundColor = "#FF7B9C";
   dialogues[11].style.visibility = "visible";
   nextButtons[11].style.visibility = "visible";
-  dialogueText[11].innerHTML = "Woof! Bark bark.<br>(Hello! My name's Patrasche. I can't believe you tracked me down all the way to Japan.)";
+  dialogueText[11].innerHTML = "Woof! Bark bark.<br>(Hello! My name's <span>Patrasche</span>. I can't believe you tracked me down all the way to <span>Japan</span>.)";
 }
 
 nextButtons[11].addEventListener("click", dialogue12Next);
 
 function dialogue12Next() {
   key2.play();
-  let dialogueArray  = ["Awooooooooo! Bark bark bark.<br>(The name seems familiar does it? That's right, I'm THE Patrasche from the famous 1872 novel A Dog of Flanders. You know, the one about a boy named Nello and his dog, Patrasche -that's me- that is set in Antwerp. It's a very popular story in Japan, Korea and the Phillipines! It has even been adapted into several Japanese films and anime.)", "<img src='./img/plaque.jpg' id='tutorialImg'>Woof woof woof!<br>(So what I'm saying is that I'm a bit of a celebrity over here, it's neat.<br>Tourists even go all the way to Antwerp to see monuments like the one with this plaque. Do you recognize the font? That's right, it's Antwerpen by studio type, AKA Jo De Baerdemaeker.)", "Woooooof. Woof woof.<br>(I know what you've been up to. You're here for the key to museum Plantin-Moretus, right? Great! I wanted you to find me after all.)","Bark! Woof woof!<br>(You see, I wanted to show the world that Antwerp has typographical roots that reach all the way to places like the US, Tibet and Japan. You understand now, don't you?)"];
+  let dialogueArray  = ["Awooooooooo! Bark bark bark.<br>(The name seems familiar does it? That's right, I'm THE Patrasche from the famous 1872 novel <span>A Dog of Flanders</span>. You know, the one about a boy named <span>Nello and his dog, Patrasche</span> -that's me- that is set in <span>Antwerp</span>. It's a very popular story in <span>Japan, Korea and the Phillipines</span>! It has even been adapted into several Japanese films and anime.)", "<img src='./img/plaque.jpg' id='tutorialImg'>Woof woof woof!<br>(So what I'm saying is that I'm a bit of a celebrity over here, it's neat.<br>Tourists even go all the way to Antwerp to see monuments like the one with this <span>plaque</span>. Do you recognize the font? That's right, it's <span>Antwerpen by Studio Type, AKA Jo De Baerdemaeker</span>.)", "Woooooof. Woof woof.<br>(I know what you've been up to. You're here for the <span>key to museum Plantin-Moretus</span>, right? Great! I wanted you to find me after all.)","Bark! Woof woof!<br>(You see, I wanted to show the world that Antwerp has <span>typographical roots</span> that reach all the way to places like the US, Tibet and Japan. You understand now, don't you?)"];
   let dialogueCountTotal = dialogueArray.length;
   if (dialogueCount < dialogueCountTotal) {
     dialogueText[11].innerHTML = dialogueArray[dialogueCount];
     dialogueCount++;
   } else {
-    dialogueText[11].innerHTML = "Woof. Awoooooo!<br>(I need to make sure you understand. I'll give you the key to the museum... if you pass my test! Answer my questions about the things you learned on this journey and get at least 6 of them right!)";
+    dialogueText[11].innerHTML = "Woof. Awoooooo!<br>(I need to make sure you understand. I'll give you the key to the museum... if you pass my <span>test</span>! Answer my questions about the things you learned on this journey and get <span>at least 6</span> of them right!)";
     nextButtons[11].style.visibility = "hidden";
     endButtons[11].style.visibility = "visible";
     dialogueCount = 0;
