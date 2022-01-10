@@ -675,6 +675,8 @@ let audioWrong = new Audio("./sound/bad.wav");
 let audioFanfare = new Audio("./sound/fanfare.mp3");
 let audioSad = new Audio("./sound/sad.wav");
 
+//quiz code adapted from https://codepen.io/Sulaimon-Olaniran/pen/zYKJLjK
+
 const questions = [
     {
         question: "What's Christophe Plantin called in Dutch?",
